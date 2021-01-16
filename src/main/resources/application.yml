@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+security:
+  jwt:
+    token:
+      secret-key: secret-key
+      expire-length: 3600000
