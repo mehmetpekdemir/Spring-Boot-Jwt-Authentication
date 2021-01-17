@@ -14,10 +14,16 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "Login Response")
-public final class LoginResponse {
+@ApiModel(value = "User Response")
+public final class UserResponse {
 
-    @ApiModelProperty(value = "Token")
-    private String token;
+    @ApiModelProperty(value = "Id")
+    private Long id;
+
+    @ApiModelProperty(value = "User name")
+    private String username;
+
+    @ApiModelProperty(value = "Role name")
+    private String role;
 
 }

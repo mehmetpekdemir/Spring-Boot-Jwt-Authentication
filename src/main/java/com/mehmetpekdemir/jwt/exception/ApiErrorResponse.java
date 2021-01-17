@@ -1,7 +1,6 @@
 package com.mehmetpekdemir.jwt.exception;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 
 import lombok.Getter;
 
@@ -16,11 +15,12 @@ public final class ApiErrorResponse {
 
     private String message;
 
-    private final String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
+    private LocalDate date;
 
     public ApiErrorResponse(int statusCode, String message) {
         this.statusCode = statusCode;
         this.message = message;
+        date = LocalDate.now();
     }
 
 }

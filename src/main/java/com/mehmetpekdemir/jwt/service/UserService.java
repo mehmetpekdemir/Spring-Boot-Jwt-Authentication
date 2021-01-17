@@ -1,6 +1,7 @@
 package com.mehmetpekdemir.jwt.service;
 
 import com.mehmetpekdemir.jwt.dto.request.LoginRequest;
+import com.mehmetpekdemir.jwt.dto.request.SignUpRequest;
 import com.mehmetpekdemir.jwt.dto.response.LoginResponse;
 
 /**
@@ -10,5 +11,9 @@ import com.mehmetpekdemir.jwt.dto.response.LoginResponse;
 public interface UserService {
 
     LoginResponse login(LoginRequest loginRequest);
+
+    void signUp(SignUpRequest signUpRequest);
+
+    boolean existsUserByUsername(String username);
 
 }
